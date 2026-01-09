@@ -1,38 +1,30 @@
 {
   "name": "wireless-earbuds-landing-page",
   "version": "1.0.0",
-  "description": "Modern landing page for wireless earbuds product showcase",
+  "description": "High-performance landing page for wireless earbuds with SEO optimization",
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "live-server --port=3000 --open=index.html",
-    "build": "npm run build:css && npm run build:html",
+    "start": "npx serve .",
+    "build": "npm run build:css && npm run build:js && npm run build:html && npm run build:assets",
     "build:css": "postcss styles/main.css -o dist/css/main.min.css",
-    "build:html": "shx cp -r *.html dist/",
-    "validate-html": "html-validator --file=index.html --format=text",
-    "lint-css": "stylelint \"styles/**/*.css\""
+    "build:js": "terser js/testimonials.js js/performance.js -o dist/js/bundle.min.js --compress --mangle",
+    "build:html": "cp *.html dist/",
+    "build:assets": "mkdir -p dist/images && cp -r images/* dist/images/ 2>/dev/null || true",
+    "lighthouse": "lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html --preset=desktop",
+    "lint-css": "stylelint \"styles/**/*.css\"",
+    "optimize-images": "imagemin images/* --out-dir=dist/images"
   },
   "devDependencies": {
-    "live-server": "^1.2.2",
-    "html-validator": "^6.0.1",
     "postcss": "^8.4.32",
     "postcss-cli": "^11.0.0",
-    "autoprefixer": "^10.4.16",
     "cssnano": "^6.0.2",
+    "autoprefixer": "^10.4.16",
+    "terser": "^5.26.0",
+    "lighthouse": "^11.4.0",
     "stylelint": "^16.1.0",
     "stylelint-config-standard": "^36.0.0",
-    "shx": "^0.3.4"
-  },
-  "engines": {
-    "node": ">=18.0.0",
-    "npm": ">=9.0.0"
-  },
-  "keywords": [
-    "landing-page",
-    "wireless-earbuds",
-    "product-showcase",
-    "static-site"
-  ],
-  "author": "",
-  "license": "MIT"
+    "imagemin": "^8.0.1",
+    "imagemin-cli": "^7.0.0"
+  }
 }
