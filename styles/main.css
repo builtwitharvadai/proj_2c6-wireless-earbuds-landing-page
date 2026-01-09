@@ -1,154 +1,10 @@
 /* ============================================
    Main Stylesheet - Wireless Earbuds Landing Page
+   Orchestrates all component styles and global utilities
    ============================================ */
 
-/* Import hero component styles */
-@import url('components/hero.css');
-
 /* ============================================
-   CSS Custom Properties (Design Tokens)
-   ============================================ */
-
-:root {
-  /* Color Palette */
-  --color-primary-50: hsl(217, 91%, 97%);
-  --color-primary-100: hsl(217, 91%, 90%);
-  --color-primary-200: hsl(217, 91%, 80%);
-  --color-primary-300: hsl(217, 91%, 70%);
-  --color-primary-400: hsl(217, 91%, 65%);
-  --color-primary-500: hsl(217, 91%, 60%);
-  --color-primary-600: hsl(217, 91%, 50%);
-  --color-primary-700: hsl(217, 91%, 40%);
-  --color-primary-800: hsl(217, 91%, 30%);
-  --color-primary-900: hsl(217, 91%, 20%);
-
-  --color-accent-50: hsl(340, 82%, 97%);
-  --color-accent-100: hsl(340, 82%, 90%);
-  --color-accent-200: hsl(340, 82%, 80%);
-  --color-accent-300: hsl(340, 82%, 70%);
-  --color-accent-400: hsl(340, 82%, 65%);
-  --color-accent-500: hsl(340, 82%, 60%);
-  --color-accent-600: hsl(340, 82%, 50%);
-  --color-accent-700: hsl(340, 82%, 40%);
-  --color-accent-800: hsl(340, 82%, 30%);
-  --color-accent-900: hsl(340, 82%, 20%);
-
-  /* Neutral Colors */
-  --color-gray-50: hsl(220, 20%, 98%);
-  --color-gray-100: hsl(220, 20%, 95%);
-  --color-gray-200: hsl(220, 20%, 90%);
-  --color-gray-300: hsl(220, 20%, 80%);
-  --color-gray-400: hsl(220, 20%, 70%);
-  --color-gray-500: hsl(220, 20%, 50%);
-  --color-gray-600: hsl(220, 20%, 40%);
-  --color-gray-700: hsl(220, 20%, 30%);
-  --color-gray-800: hsl(220, 20%, 20%);
-  --color-gray-900: hsl(220, 20%, 10%);
-
-  /* Semantic Colors */
-  --color-bg-primary: hsl(0, 0%, 100%);
-  --color-bg-secondary: hsl(220, 20%, 98%);
-  --color-bg-tertiary: hsl(220, 20%, 95%);
-  --color-bg-dark: hsl(220, 20%, 10%);
-  
-  --color-text-primary: hsl(220, 20%, 10%);
-  --color-text-secondary: hsl(220, 20%, 40%);
-  --color-text-tertiary: hsl(220, 20%, 60%);
-  --color-text-inverse: hsl(0, 0%, 100%);
-
-  --color-border: hsl(220, 20%, 90%);
-  --color-border-light: hsl(220, 20%, 95%);
-
-  /* Typography Scale */
-  --font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  --font-family-heading: var(--font-family-base);
-  --font-family-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
-
-  --font-size-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
-  --font-size-sm: clamp(0.875rem, 0.8rem + 0.375vw, 1rem);
-  --font-size-base: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
-  --font-size-lg: clamp(1.125rem, 1rem + 0.625vw, 1.25rem);
-  --font-size-xl: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);
-  --font-size-2xl: clamp(1.5rem, 1.3rem + 1vw, 1.875rem);
-  --font-size-3xl: clamp(1.875rem, 1.6rem + 1.375vw, 2.25rem);
-  --font-size-4xl: clamp(2.25rem, 1.9rem + 1.75vw, 3rem);
-  --font-size-5xl: clamp(3rem, 2.5rem + 2.5vw, 3.75rem);
-
-  --font-weight-normal: 400;
-  --font-weight-medium: 500;
-  --font-weight-semibold: 600;
-  --font-weight-bold: 700;
-
-  --line-height-tight: 1.2;
-  --line-height-snug: 1.375;
-  --line-height-normal: 1.5;
-  --line-height-relaxed: 1.625;
-  --line-height-loose: 2;
-
-  /* Spacing Scale */
-  --space-xs: max(0.25rem, 1vw);
-  --space-sm: max(0.5rem, 2vw);
-  --space-md: max(1rem, 3vw);
-  --space-lg: max(1.5rem, 4vw);
-  --space-xl: max(2rem, 5vw);
-  --space-2xl: max(3rem, 6vw);
-  --space-3xl: max(4rem, 8vw);
-
-  /* Layout */
-  --container-max-width: 1280px;
-  --container-padding: max(1rem, 5vw);
-
-  /* Border Radius */
-  --radius-sm: 0.25rem;
-  --radius-md: 0.5rem;
-  --radius-lg: 0.75rem;
-  --radius-xl: 1rem;
-  --radius-2xl: 1.5rem;
-  --radius-full: 9999px;
-
-  /* Shadows */
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-
-  /* Transitions */
-  --transition-fast: 150ms ease;
-  --transition-base: 250ms ease;
-  --transition-slow: 350ms ease;
-
-  /* Z-index Scale */
-  --z-dropdown: 1000;
-  --z-sticky: 1020;
-  --z-fixed: 1030;
-  --z-modal-backdrop: 1040;
-  --z-modal: 1050;
-  --z-popover: 1060;
-  --z-tooltip: 1070;
-}
-
-/* ============================================
-   Dark Mode Support
-   ============================================ */
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-bg-primary: hsl(220, 20%, 10%);
-    --color-bg-secondary: hsl(220, 20%, 15%);
-    --color-bg-tertiary: hsl(220, 20%, 20%);
-    
-    --color-text-primary: hsl(0, 0%, 100%);
-    --color-text-secondary: hsl(220, 20%, 70%);
-    --color-text-tertiary: hsl(220, 20%, 50%);
-    
-    --color-border: hsl(220, 20%, 30%);
-    --color-border-light: hsl(220, 20%, 25%);
-  }
-}
-
-/* ============================================
-   Base Styles
+   CSS Reset and Base Styles
    ============================================ */
 
 *,
@@ -160,86 +16,96 @@
 }
 
 html {
-  font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  scroll-behavior: smooth;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
 }
 
 body {
-  font-family: var(--font-family-base);
-  font-size: var(--font-size-base);
-  font-weight: var(--font-weight-normal);
-  line-height: var(--line-height-normal);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.5;
   color: var(--color-text-primary);
   background-color: var(--color-bg-primary);
-  min-height: 100vh;
-  min-height: 100dvh;
 }
 
 /* ============================================
-   Typography
+   CSS Custom Properties (Design Tokens)
    ============================================ */
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-family-heading);
-  font-weight: var(--font-weight-bold);
-  line-height: var(--line-height-tight);
-  color: var(--color-text-primary);
-  text-wrap: balance;
+:root {
+  /* Color Palette */
+  --color-primary-50: hsl(217, 91%, 97%);
+  --color-primary-100: hsl(217, 91%, 90%);
+  --color-primary-200: hsl(217, 91%, 80%);
+  --color-primary-500: hsl(217, 91%, 60%);
+  --color-primary-600: hsl(217, 91%, 50%);
+  --color-primary-700: hsl(217, 91%, 40%);
+  --color-primary-900: hsl(217, 91%, 20%);
+
+  --color-text-primary: hsl(0, 0%, 10%);
+  --color-text-secondary: hsl(0, 0%, 40%);
+  --color-text-inverse: hsl(0, 0%, 100%);
+
+  --color-bg-primary: hsl(0, 0%, 100%);
+  --color-bg-secondary: hsl(0, 0%, 98%);
+
+  --color-border-light: hsl(0, 0%, 90%);
+
+  /* Typography Scale */
+  --font-size-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+  --font-size-sm: clamp(0.875rem, 0.8rem + 0.375vw, 1rem);
+  --font-size-base: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
+  --font-size-lg: clamp(1.125rem, 1rem + 0.625vw, 1.25rem);
+  --font-size-xl: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);
+  --font-size-2xl: clamp(1.5rem, 1.3rem + 1vw, 2rem);
+  --font-size-3xl: clamp(2rem, 1.7rem + 1.5vw, 3rem);
+
+  /* Font Weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Line Heights */
+  --line-height-tight: 1.2;
+  --line-height-snug: 1.375;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+
+  /* Spacing Scale */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+
+  /* Layout */
+  --container-max-width: 1280px;
+  --container-padding: 1.5rem;
+
+  /* Border Radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+  /* Transitions */
+  --transition-base: 0.2s ease-in-out;
 }
 
-h1 {
-  font-size: var(--font-size-4xl);
-}
+/* ============================================
+   Component Imports
+   ============================================ */
 
-h2 {
-  font-size: var(--font-size-3xl);
-}
-
-h3 {
-  font-size: var(--font-size-2xl);
-}
-
-h4 {
-  font-size: var(--font-size-xl);
-}
-
-h5 {
-  font-size: var(--font-size-lg);
-}
-
-h6 {
-  font-size: var(--font-size-base);
-}
-
-p {
-  margin-bottom: var(--space-md);
-  text-wrap: pretty;
-}
-
-a {
-  color: var(--color-primary-600);
-  text-decoration: none;
-  transition: color var(--transition-base);
-}
-
-a:hover {
-  color: var(--color-primary-700);
-}
-
-a:focus-visible {
-  outline: 2px solid var(--color-primary-500);
-  outline-offset: 2px;
-  border-radius: var(--radius-sm);
-}
+@import 'components/hero.css';
+@import 'components/features.css';
 
 /* ============================================
    Utility Classes
@@ -261,30 +127,4 @@ a:focus-visible {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
-}
-
-/* ============================================
-   Accessibility
-   ============================================ */
-
-:focus-visible {
-  outline: 2px solid var(--color-primary-500);
-  outline-offset: 2px;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-}
-
-@media (prefers-contrast: high) {
-  :root {
-    --color-primary-500: hsl(217, 100%, 50%);
-    --color-accent-500: hsl(340, 100%, 50%);
-  }
 }
