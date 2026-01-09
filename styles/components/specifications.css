@@ -1,0 +1,375 @@
+/* ============================================
+   Technical Specifications Component Styles
+   Responsive table/card layout with accessibility
+   ============================================ */
+
+/* ============================================
+   Specifications Section Container
+   ============================================ */
+
+.specifications {
+  padding-block: var(--space-3xl);
+  background-color: var(--color-bg-secondary);
+}
+
+.specifications__container {
+  max-width: var(--container-max-width);
+  margin-inline: auto;
+  padding-inline: var(--container-padding);
+}
+
+.specifications__header {
+  text-align: center;
+  margin-block-end: var(--space-2xl);
+}
+
+.specifications__title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  color: var(--color-text-primary);
+  margin-block-end: var(--space-md);
+}
+
+.specifications__subtitle {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+  max-width: 60ch;
+  margin-inline: auto;
+}
+
+/* ============================================
+   Specifications Table Layout
+   ============================================ */
+
+.specifications__table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  background-color: var(--color-bg-primary);
+}
+
+.specifications__table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.specifications__table thead {
+  background-color: var(--color-primary-50);
+  border-bottom: 2px solid var(--color-primary-200);
+}
+
+.specifications__table th {
+  padding: var(--space-lg);
+  text-align: left;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary-900);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.specifications__table tbody tr {
+  border-bottom: 1px solid var(--color-border-light);
+  transition: background-color var(--transition-base);
+}
+
+.specifications__table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.specifications__table tbody tr:hover {
+  background-color: var(--color-primary-50);
+}
+
+.specifications__table td {
+  padding: var(--space-lg);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+}
+
+.specifications__table td:first-child {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+}
+
+.specifications__table td:last-child {
+  color: var(--color-text-secondary);
+}
+
+/* ============================================
+   Card Layout (Alternative to Table)
+   ============================================ */
+
+.specifications__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  gap: var(--space-lg);
+}
+
+.specifications__card {
+  background-color: var(--color-bg-primary);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.specifications__card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.specifications__card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-block-end: var(--space-lg);
+  padding-block-end: var(--space-md);
+  border-bottom: 2px solid var(--color-primary-100);
+}
+
+.specifications__card-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-primary-100);
+  color: var(--color-primary-600);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-xl);
+  flex-shrink: 0;
+}
+
+.specifications__card-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  line-height: var(--line-height-snug);
+}
+
+.specifications__card-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.specifications__card-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--space-md);
+  align-items: baseline;
+}
+
+.specifications__card-label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+}
+
+.specifications__card-value {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  text-align: right;
+}
+
+/* ============================================
+   Category Grouping
+   ============================================ */
+
+.specifications__category {
+  margin-block-end: var(--space-2xl);
+}
+
+.specifications__category:last-child {
+  margin-block-end: 0;
+}
+
+.specifications__category-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin-block-end: var(--space-lg);
+  padding-block-end: var(--space-sm);
+  border-bottom: 2px solid var(--color-primary-200);
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+
+@media (max-width: 768px) {
+  .specifications {
+    padding-block: var(--space-2xl);
+  }
+
+  .specifications__header {
+    margin-block-end: var(--space-xl);
+  }
+
+  .specifications__title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .specifications__subtitle {
+    font-size: var(--font-size-base);
+  }
+
+  /* Stack table on mobile */
+  .specifications__table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  .specifications__table tbody tr {
+    display: block;
+    margin-block-end: var(--space-lg);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-md);
+    background-color: var(--color-bg-primary);
+  }
+
+  .specifications__table tbody tr:last-child {
+    margin-block-end: 0;
+  }
+
+  .specifications__table td {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-sm);
+    padding: var(--space-md) var(--space-lg);
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .specifications__table td:last-child {
+    border-bottom: none;
+  }
+
+  .specifications__table td::before {
+    content: attr(data-label);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+  }
+
+  .specifications__table td:first-child {
+    font-weight: var(--font-weight-normal);
+  }
+
+  /* Card layout adjustments */
+  .specifications__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .specifications__card {
+    padding: var(--space-lg);
+  }
+
+  .specifications__card-header {
+    margin-block-end: var(--space-md);
+  }
+
+  .specifications__card-icon {
+    width: 2rem;
+    height: 2rem;
+    font-size: var(--font-size-lg);
+  }
+
+  .specifications__card-title {
+    font-size: var(--font-size-base);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .specifications__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1025px) {
+  .specifications__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ============================================
+   Accessibility Enhancements
+   ============================================ */
+
+.specifications__table:focus-visible {
+  outline: 2px solid var(--color-primary-600);
+  outline-offset: 4px;
+}
+
+.specifications__card:focus-within {
+  outline: 2px solid var(--color-primary-600);
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .specifications__table tbody tr {
+    border-bottom-width: 2px;
+  }
+
+  .specifications__card {
+    border: 2px solid var(--color-text-primary);
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .specifications__table tbody tr,
+  .specifications__card {
+    transition: none;
+  }
+
+  .specifications__card:hover {
+    transform: none;
+  }
+}
+
+/* ============================================
+   Print Styles
+   ============================================ */
+
+@media print {
+  .specifications {
+    padding-block: 1rem;
+    background-color: transparent;
+  }
+
+  .specifications__table-wrapper {
+    box-shadow: none;
+    border: 1px solid black;
+  }
+
+  .specifications__table tbody tr:hover {
+    background-color: transparent;
+  }
+
+  .specifications__card {
+    box-shadow: none;
+    border: 1px solid black;
+    page-break-inside: avoid;
+  }
+
+  .specifications__card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
