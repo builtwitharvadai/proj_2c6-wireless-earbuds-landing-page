@@ -1,30 +1,49 @@
 {
   "name": "wireless-earbuds-landing-page",
   "version": "1.0.0",
-  "description": "High-performance landing page for wireless earbuds with SEO optimization",
+  "description": "Landing page for wireless earbuds with cross-browser compatibility",
   "private": true,
   "type": "module",
   "scripts": {
     "start": "npx serve .",
-    "build": "npm run build:css && npm run build:js && npm run build:html && npm run build:assets",
+    "build": "npm run build:css && npm run build:js && npm run build:html",
     "build:css": "postcss styles/main.css -o dist/css/main.min.css",
-    "build:js": "terser js/testimonials.js js/performance.js -o dist/js/bundle.min.js --compress --mangle",
-    "build:html": "cp *.html dist/",
-    "build:assets": "mkdir -p dist/images && cp -r images/* dist/images/ 2>/dev/null || true",
-    "lighthouse": "lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html --preset=desktop",
+    "build:js": "npm run build:js:performance && npm run build:js:testimonials && npm run build:js:compatibility",
+    "build:js:performance": "terser js/performance.js -o dist/js/performance.min.js --compress --mangle",
+    "build:js:testimonials": "terser js/testimonials.js -o dist/js/testimonials.min.js --compress --mangle",
+    "build:js:compatibility": "terser js/compatibility.js -o dist/js/compatibility.min.js --compress --mangle",
+    "build:html": "shx cp -r index.html dist/",
+    "test": "npm run test-browsers",
+    "test-browsers": "npm run test:chrome && npm run test:firefox && npm run test:safari && npm run test:edge",
+    "test:chrome": "echo 'Testing Chrome compatibility...' && node test-scripts/chrome-test.js",
+    "test:firefox": "echo 'Testing Firefox compatibility...' && node test-scripts/firefox-test.js",
+    "test:safari": "echo 'Testing Safari compatibility...' && node test-scripts/safari-test.js",
+    "test:edge": "echo 'Testing Edge compatibility...' && node test-scripts/edge-test.js",
+    "test-cross-browser": "npm run validate:css && npm run validate:js && npm run test-browsers",
     "lint-css": "stylelint \"styles/**/*.css\"",
-    "optimize-images": "imagemin images/* --out-dir=dist/images"
+    "validate:css": "stylelint \"styles/**/*.css\" --fix",
+    "validate:js": "eslint \"js/**/*.js\"",
+    "validate:html": "html-validate index.html"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.16",
     "postcss": "^8.4.32",
     "postcss-cli": "^11.0.0",
-    "cssnano": "^6.0.2",
-    "autoprefixer": "^10.4.16",
     "terser": "^5.26.0",
-    "lighthouse": "^11.4.0",
+    "shx": "^0.3.4",
     "stylelint": "^16.1.0",
     "stylelint-config-standard": "^36.0.0",
-    "imagemin": "^8.0.1",
-    "imagemin-cli": "^7.0.0"
-  }
+    "eslint": "^8.57.0",
+    "html-validate": "^8.9.0",
+    "playwright": "^1.40.1",
+    "browserslist": "^4.22.2"
+  },
+  "browserslist": [
+    "last 2 Chrome versions",
+    "last 2 Firefox versions",
+    "last 2 Safari versions",
+    "last 2 Edge versions",
+    "> 1%",
+    "not dead"
+  ]
 }
