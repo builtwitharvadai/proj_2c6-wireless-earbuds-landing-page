@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="styles/main.css">
   <link rel="stylesheet" href="styles/components/hero.css">
   <link rel="stylesheet" href="styles/components/features.css">
+  <link rel="stylesheet" href="styles/components/specifications.css">
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
@@ -154,39 +155,48 @@
       </div>
     </section>
 
-    <section id="specs" class="specs-section section-container">
-      <div class="section-header">
-        <h2 class="section-title">Technical Specifications</h2>
-        <p class="section-subtitle">Engineered for performance</p>
-      </div>
-      <div class="specs-content">
-        <div class="specs-image">
-          <img 
-            src="https://images.unsplash.com/photo-1606841837239-c5a1a4a07af7?w=800&h=600&fit=crop&q=80&auto=format" 
-            alt="Close-up view of wireless earbuds showing premium build quality and design details"
-            loading="lazy"
-            decoding="async"
-            width="800"
-            height="600"
-          >
-        </div>
-        <div class="specs-grid">
-          <div class="spec-item">
-            <span class="spec-label">Driver Size</span>
-            <span class="spec-value">10mm Dynamic</span>
-          </div>
-          <div class="spec-item">
-            <span class="spec-label">Bluetooth</span>
-            <span class="spec-value">5.3</span>
-          </div>
-          <div class="spec-item">
-            <span class="spec-label">Water Resistance</span>
-            <span class="spec-value">IPX7</span>
-          </div>
-          <div class="spec-item">
-            <span class="spec-label">Charging</span>
-            <span class="spec-value">USB-C Fast Charge</span>
-          </div>
+    <section id="specs" class="specifications" aria-labelledby="specifications-title">
+      <div class="specifications__container">
+        <header class="specifications__header">
+          <h2 id="specifications-title" class="specifications__title">Technical Specifications</h2>
+          <p class="specifications__subtitle">Engineered for performance with cutting-edge technology</p>
+        </header>
+        
+        <div class="specifications__table-wrapper">
+          <table class="specifications__table">
+            <thead>
+              <tr>
+                <th scope="col">Specification</th>
+                <th scope="col">Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Specification">Bluetooth Version</td>
+                <td data-label="Details">Bluetooth 5.2</td>
+              </tr>
+              <tr>
+                <td data-label="Specification">Battery Life</td>
+                <td data-label="Details">30 hours total (8 hours earbuds + 22 hours case)</td>
+              </tr>
+              <tr>
+                <td data-label="Specification">Driver Size</td>
+                <td data-label="Details">10mm dynamic drivers</td>
+              </tr>
+              <tr>
+                <td data-label="Specification">Frequency Response</td>
+                <td data-label="Details">20Hz - 20kHz</td>
+              </tr>
+              <tr>
+                <td data-label="Specification">Charging</td>
+                <td data-label="Details">USB-C fast charging (10 min = 2 hours playback)</td>
+              </tr>
+              <tr>
+                <td data-label="Specification">Water Resistance</td>
+                <td data-label="Details">IPX4 rated (sweat and splash resistant)</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </section>
