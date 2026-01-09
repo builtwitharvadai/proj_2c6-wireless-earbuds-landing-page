@@ -1,0 +1,331 @@
+/* ============================================
+   Features Section Component Styles
+   Wireless Earbuds Landing Page
+   ============================================ */
+
+/* ============================================
+   Features Section Container
+   ============================================ */
+
+.features {
+  padding-block: var(--space-3xl);
+  background-color: var(--color-bg-secondary);
+  position: relative;
+  isolation: isolate;
+}
+
+.features::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    var(--color-bg-primary) 0%,
+    var(--color-bg-secondary) 10%,
+    var(--color-bg-secondary) 90%,
+    var(--color-bg-primary) 100%
+  );
+  z-index: -1;
+}
+
+.features__container {
+  max-width: var(--container-max-width);
+  margin-inline: auto;
+  padding-inline: var(--container-padding);
+}
+
+/* ============================================
+   Features Header
+   ============================================ */
+
+.features__header {
+  text-align: center;
+  margin-block-end: var(--space-3xl);
+}
+
+.features__title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  color: var(--color-text-primary);
+  margin-block-end: var(--space-md);
+  text-wrap: balance;
+}
+
+.features__subtitle {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+  max-width: 65ch;
+  margin-inline: auto;
+  text-wrap: pretty;
+}
+
+/* ============================================
+   Features Grid Layout
+   ============================================ */
+
+.features__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  gap: var(--space-xl);
+  container-type: inline-size;
+  container-name: features-grid;
+}
+
+@media (width >= 640px) {
+  .features__grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
+    gap: var(--space-2xl);
+  }
+}
+
+@media (width >= 1024px) {
+  .features__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ============================================
+   Feature Card Component
+   ============================================ */
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--space-xl);
+  background-color: var(--color-bg-primary);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary-50) 0%,
+    transparent 50%
+  );
+  opacity: 0;
+  transition: opacity var(--transition-base);
+  z-index: -1;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-primary-200);
+}
+
+.feature-card:hover::before {
+  opacity: 1;
+}
+
+.feature-card:focus-within {
+  outline: 2px solid var(--color-primary-500);
+  outline-offset: 2px;
+  border-radius: var(--radius-xl);
+}
+
+/* ============================================
+   Feature Icon
+   ============================================ */
+
+.feature-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  margin-block-end: var(--space-lg);
+  background: linear-gradient(
+    135deg,
+    var(--color-primary-500) 0%,
+    var(--color-primary-600) 100%
+  );
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-base);
+  flex-shrink: 0;
+}
+
+.feature-card:hover .feature-card__icon {
+  transform: scale(1.05) rotate(-5deg);
+}
+
+.feature-card__icon svg,
+.feature-card__icon i {
+  width: 32px;
+  height: 32px;
+  color: var(--color-text-inverse);
+  font-size: 32px;
+}
+
+/* Icon fallback for text-based icons */
+.feature-card__icon::before {
+  font-size: 32px;
+  color: var(--color-text-inverse);
+}
+
+/* ============================================
+   Feature Content
+   ============================================ */
+
+.feature-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  flex: 1;
+}
+
+.feature-card__title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-snug);
+  color: var(--color-text-primary);
+  margin: 0;
+  text-wrap: balance;
+}
+
+.feature-card__description {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+  margin: 0;
+  text-wrap: pretty;
+}
+
+/* ============================================
+   Container Query Adjustments
+   ============================================ */
+
+@container features-grid (width > 768px) {
+  .feature-card {
+    padding: var(--space-2xl);
+  }
+
+  .feature-card__icon {
+    width: 72px;
+    height: 72px;
+  }
+
+  .feature-card__icon svg,
+  .feature-card__icon i,
+  .feature-card__icon::before {
+    width: 36px;
+    height: 36px;
+    font-size: 36px;
+  }
+}
+
+/* ============================================
+   Accessibility Enhancements
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .feature-card,
+  .feature-card::before,
+  .feature-card__icon {
+    transition-duration: 0.01ms !important;
+  }
+
+  .feature-card:hover {
+    transform: none;
+  }
+
+  .feature-card:hover .feature-card__icon {
+    transform: none;
+  }
+}
+
+@media (prefers-contrast: high) {
+  .feature-card {
+    border-width: 2px;
+    border-color: var(--color-text-primary);
+  }
+
+  .feature-card__icon {
+    background: var(--color-primary-600);
+    border: 2px solid var(--color-text-primary);
+  }
+}
+
+/* ============================================
+   Dark Mode Support
+   ============================================ */
+
+@media (prefers-color-scheme: dark) {
+  .feature-card::before {
+    background: linear-gradient(
+      135deg,
+      var(--color-primary-900) 0%,
+      transparent 50%
+    );
+  }
+
+  .feature-card:hover {
+    border-color: var(--color-primary-700);
+  }
+}
+
+/* ============================================
+   Print Styles
+   ============================================ */
+
+@media print {
+  .features {
+    padding-block: 2rem;
+    background: transparent !important;
+  }
+
+  .features::before {
+    display: none;
+  }
+
+  .features__grid {
+    display: block;
+  }
+
+  .feature-card {
+    page-break-inside: avoid;
+    margin-block-end: 1rem;
+    box-shadow: none !important;
+    border: 1px solid #000 !important;
+  }
+
+  .feature-card::before,
+  .feature-card:hover {
+    display: none;
+    transform: none;
+  }
+
+  .feature-card__icon {
+    background: #000 !important;
+    box-shadow: none !important;
+  }
+}
+
+/* ============================================
+   Focus Visible States
+   ============================================ */
+
+.feature-card:focus-visible {
+  outline: 2px solid var(--color-primary-500);
+  outline-offset: 4px;
+}
+
+.feature-card__title:focus-visible {
+  outline: 2px solid var(--color-primary-500);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
