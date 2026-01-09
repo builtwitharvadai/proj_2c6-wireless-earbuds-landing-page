@@ -14,6 +14,7 @@
   <link rel="canonical" href="https://audiotech.example.com">
   <link rel="stylesheet" href="styles/main.css">
   <link rel="stylesheet" href="styles/components/hero.css">
+  <link rel="stylesheet" href="styles/components/features.css">
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
@@ -82,27 +83,74 @@
       </div>
     </section>
 
-    <section id="features" class="features-section section-container">
-      <div class="section-header">
-        <h2 class="section-title">Premium Features</h2>
-        <p class="section-subtitle">Everything you need for the perfect audio experience</p>
-      </div>
-      <div class="features-grid">
-        <article class="feature-card">
-          <div class="feature-icon" aria-hidden="true">🎵</div>
-          <h3 class="feature-title">Studio Quality Sound</h3>
-          <p class="feature-description">Experience rich, balanced audio with deep bass and crystal-clear highs powered by premium drivers.</p>
-        </article>
-        <article class="feature-card">
-          <div class="feature-icon" aria-hidden="true">🔇</div>
-          <h3 class="feature-title">Active Noise Cancellation</h3>
-          <p class="feature-description">Block out distractions with advanced ANC technology that adapts to your environment.</p>
-        </article>
-        <article class="feature-card">
-          <div class="feature-icon" aria-hidden="true">🔋</div>
-          <h3 class="feature-title">30-Hour Battery Life</h3>
-          <p class="feature-description">All-day listening with 8 hours per charge plus 22 hours from the charging case.</p>
-        </article>
+    <section id="features" class="features" aria-labelledby="features-title">
+      <div class="features__container">
+        <header class="features__header">
+          <h2 id="features-title" class="features__title">Premium Features</h2>
+          <p class="features__subtitle">Everything you need for the perfect audio experience</p>
+        </header>
+        
+        <div class="features__grid">
+          <article class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">
+              <span>🔋</span>
+            </div>
+            <div class="feature-card__content">
+              <h3 class="feature-card__title">30-Hour Battery Life</h3>
+              <p class="feature-card__description">All-day listening with 8 hours per charge plus 22 hours from the charging case. Fast charging gives you 2 hours of playback in just 10 minutes.</p>
+            </div>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">
+              <span>🎵</span>
+            </div>
+            <div class="feature-card__content">
+              <h3 class="feature-card__title">Studio Quality Sound</h3>
+              <p class="feature-card__description">Experience rich, balanced audio with deep bass and crystal-clear highs powered by premium 10mm dynamic drivers. Hear every detail in your music.</p>
+            </div>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">
+              <span>🔇</span>
+            </div>
+            <div class="feature-card__content">
+              <h3 class="feature-card__title">Active Noise Cancellation</h3>
+              <p class="feature-card__description">Block out distractions with advanced ANC technology that adapts to your environment. Transparency mode lets you hear what matters when you need it.</p>
+            </div>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">
+              <span>☁️</span>
+            </div>
+            <div class="feature-card__content">
+              <h3 class="feature-card__title">All-Day Comfort</h3>
+              <p class="feature-card__description">Ergonomic design with three sizes of soft silicone ear tips ensures a secure, comfortable fit for hours of listening. Lightweight at just 5 grams per earbud.</p>
+            </div>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">
+              <span>📡</span>
+            </div>
+            <div class="feature-card__content">
+              <h3 class="feature-card__title">Seamless Connectivity</h3>
+              <p class="feature-card__description">Bluetooth 5.3 provides stable, low-latency connection up to 30 feet. Instant pairing and automatic device switching for effortless use across all your devices.</p>
+            </div>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">
+              <span>💧</span>
+            </div>
+            <div class="feature-card__content">
+              <h3 class="feature-card__title">Water Resistant</h3>
+              <p class="feature-card__description">IPX7 water resistance protects against sweat and rain, making them perfect for workouts and outdoor activities. Built to withstand your active lifestyle.</p>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
