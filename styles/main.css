@@ -1,6 +1,6 @@
 /* ============================================
-   Main Stylesheet
-   Wireless Earbuds Landing Page
+   Main Stylesheet - Wireless Earbuds Landing Page
+   Cross-browser compatible with vendor prefixes
    ============================================ */
 
 /* ============================================
@@ -15,12 +15,29 @@
   padding: 0;
 }
 
+html {
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-primary);
+  overflow-x: hidden;
+}
+
 /* ============================================
    CSS Custom Properties (Design Tokens)
    ============================================ */
 
 :root {
-  /* Color Palette */
+  /* Color System */
   --color-primary-50: hsl(217, 91%, 97%);
   --color-primary-100: hsl(217, 91%, 90%);
   --color-primary-200: hsl(217, 91%, 80%);
@@ -30,84 +47,505 @@
   --color-primary-800: hsl(217, 91%, 30%);
   --color-primary-900: hsl(217, 91%, 20%);
 
+  --color-accent-500: hsl(340, 82%, 52%);
+  --color-accent-600: hsl(340, 82%, 42%);
+
+  --color-text-primary: hsl(0, 0%, 13%);
+  --color-text-secondary: hsl(0, 0%, 40%);
+  --color-text-inverse: hsl(0, 0%, 100%);
+
   --color-bg-primary: hsl(0, 0%, 100%);
   --color-bg-secondary: hsl(0, 0%, 98%);
-  
-  --color-text-primary: hsl(0, 0%, 10%);
-  --color-text-secondary: hsl(0, 0%, 40%);
-  
-  --color-border-light: hsl(0, 0%, 90%);
-  --color-gray-800: hsl(0, 0%, 20%);
+  --color-bg-tertiary: hsl(0, 0%, 95%);
+  --color-bg-dark: hsl(0, 0%, 13%);
 
-  /* Typography */
-  --font-size-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
-  --font-size-sm: clamp(0.875rem, 0.8rem + 0.375vw, 1rem);
-  --font-size-base: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
-  --font-size-lg: clamp(1.125rem, 1rem + 0.625vw, 1.25rem);
-  --font-size-xl: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);
-  --font-size-2xl: clamp(1.5rem, 1.3rem + 1vw, 2rem);
-  --font-size-3xl: clamp(2rem, 1.7rem + 1.5vw, 3rem);
+  --color-border: hsl(0, 0%, 85%);
+  --color-border-light: hsl(0, 0%, 90%);
+
+  /* Typography Scale */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
 
   --font-weight-normal: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
 
-  --line-height-tight: 1.2;
+  --line-height-tight: 1.25;
   --line-height-snug: 1.375;
   --line-height-normal: 1.5;
   --line-height-relaxed: 1.625;
 
-  /* Spacing */
-  --space-xs: max(0.25rem, 1vw);
-  --space-sm: max(0.5rem, 2vw);
-  --space-md: max(1rem, 3vw);
-  --space-lg: max(1.5rem, 4vw);
-  --space-xl: max(2rem, 5vw);
-  --space-2xl: max(3rem, 6vw);
-  --space-3xl: max(4rem, 8vw);
-
-  /* Layout */
-  --container-max-width: 1200px;
-  --container-padding: var(--space-md);
+  /* Spacing Scale */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
 
   /* Border Radius */
   --radius-sm: 0.25rem;
   --radius-md: 0.5rem;
-  --radius-lg: 1rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
   --radius-full: 9999px;
 
   /* Shadows */
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 
   /* Transitions */
-  --transition-base: 0.2s ease;
-  --transition-slow: 0.3s ease;
+  --transition-base: 0.2s ease-in-out;
+  --transition-slow: 0.3s ease-in-out;
+
+  /* Container */
+  --container-max-width: 1280px;
+  --container-padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --container-padding: 2rem;
+  }
 }
 
 /* ============================================
-   Base Typography
+   Utility Classes
    ============================================ */
 
-body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  font-size: var(--font-size-base);
-  line-height: var(--line-height-normal);
+.container {
+  max-width: var(--container-max-width);
+  margin-inline: auto;
+  padding-inline: var(--container-padding);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* ============================================
+   Cross-Browser Flexbox with Vendor Prefixes
+   ============================================ */
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.flex-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+.flex-center {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+/* ============================================
+   Cross-Browser Grid with Vendor Prefixes
+   ============================================ */
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+}
+
+/* ============================================
+   Cross-Browser Transforms with Vendor Prefixes
+   ============================================ */
+
+.transform {
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+/* ============================================
+   Cross-Browser Transitions with Vendor Prefixes
+   ============================================ */
+
+.transition {
+  -webkit-transition: all var(--transition-base);
+  -moz-transition: all var(--transition-base);
+  -ms-transition: all var(--transition-base);
+  -o-transition: all var(--transition-base);
+  transition: all var(--transition-base);
+}
+
+/* ============================================
+   Cross-Browser Animations with Vendor Prefixes
+   ============================================ */
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  -webkit-animation: fadeIn 0.5s ease-in;
+  -moz-animation: fadeIn 0.5s ease-in;
+  -o-animation: fadeIn 0.5s ease-in;
+  animation: fadeIn 0.5s ease-in;
+}
+
+/* ============================================
+   Cross-Browser Gradient Backgrounds
+   ============================================ */
+
+.gradient-bg {
+  background: -webkit-gradient(linear, left top, right bottom, from(var(--color-primary-50)), to(var(--color-bg-primary)));
+  background: -webkit-linear-gradient(top left, var(--color-primary-50) 0%, var(--color-bg-primary) 100%);
+  background: -moz-linear-gradient(top left, var(--color-primary-50) 0%, var(--color-bg-primary) 100%);
+  background: -o-linear-gradient(top left, var(--color-primary-50) 0%, var(--color-bg-primary) 100%);
+  background: linear-gradient(135deg, var(--color-primary-50) 0%, var(--color-bg-primary) 100%);
+}
+
+/* ============================================
+   Cross-Browser Box Shadow
+   ============================================ */
+
+.shadow {
+  -webkit-box-shadow: var(--shadow-md);
+  -moz-box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-md);
+}
+
+/* ============================================
+   Cross-Browser Border Radius
+   ============================================ */
+
+.rounded {
+  -webkit-border-radius: var(--radius-md);
+  -moz-border-radius: var(--radius-md);
+  border-radius: var(--radius-md);
+}
+
+.rounded-lg {
+  -webkit-border-radius: var(--radius-lg);
+  -moz-border-radius: var(--radius-lg);
+  border-radius: var(--radius-lg);
+}
+
+.rounded-full {
+  -webkit-border-radius: var(--radius-full);
+  -moz-border-radius: var(--radius-full);
+  border-radius: var(--radius-full);
+}
+
+/* ============================================
+   Cross-Browser User Select
+   ============================================ */
+
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* ============================================
+   Cross-Browser Appearance
+   ============================================ */
+
+button,
+input,
+select,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* ============================================
+   Cross-Browser Backdrop Filter (with fallback)
+   ============================================ */
+
+.backdrop-blur {
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+@supports not ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {
+  .backdrop-blur {
+    background-color: rgba(255, 255, 255, 0.95);
+  }
+}
+
+/* ============================================
+   Cross-Browser Sticky Positioning (with fallback)
+   ============================================ */
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+@supports not (position: sticky) {
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+  }
+}
+
+/* ============================================
+   Cross-Browser Object Fit (with fallback)
+   ============================================ */
+
+.object-cover {
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+@supports not (object-fit: cover) {
+  .object-cover {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* ============================================
+   Cross-Browser Clip Path (with fallback)
+   ============================================ */
+
+.clip-path {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+@supports not ((-webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%)) or (clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%))) {
+  .clip-path {
+    overflow: hidden;
+  }
+}
+
+/* ============================================
+   Cross-Browser Filter Effects
+   ============================================ */
+
+.filter-grayscale {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.filter-blur {
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+}
+
+/* ============================================
+   Cross-Browser Column Layout
+   ============================================ */
+
+.columns {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
+  -webkit-column-gap: var(--space-lg);
+  -moz-column-gap: var(--space-lg);
+  column-gap: var(--space-lg);
+}
+
+/* ============================================
+   Cross-Browser Scroll Behavior
+   ============================================ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ============================================
+   Cross-Browser Scrollbar Styling
+   ============================================ */
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary-500);
+  -webkit-border-radius: var(--radius-full);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary-600);
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-primary-500) var(--color-bg-secondary);
+}
+
+/* ============================================
+   Cross-Browser Selection Styling
+   ============================================ */
+
+::-moz-selection {
+  background-color: var(--color-primary-200);
   color: var(--color-text-primary);
-  background-color: var(--color-bg-primary);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: var(--color-primary-200);
+  color: var(--color-text-primary);
+}
+
+/* ============================================
+   Cross-Browser Placeholder Styling
+   ============================================ */
+
+::-webkit-input-placeholder {
+  color: var(--color-text-secondary);
+  opacity: 1;
+}
+
+::-moz-placeholder {
+  color: var(--color-text-secondary);
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: var(--color-text-secondary);
+  opacity: 1;
+}
+
+::-ms-input-placeholder {
+  color: var(--color-text-secondary);
+  opacity: 1;
+}
+
+::placeholder {
+  color: var(--color-text-secondary);
+  opacity: 1;
+}
+
+/* ============================================
+   Cross-Browser Focus Visible
+   ============================================ */
+
+:focus-visible {
+  outline: 2px solid var(--color-primary-500);
+  outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ============================================
+   Internet Explorer 11 Specific Fixes
+   ============================================ */
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .flex {
+    display: -ms-flexbox;
+  }
+  
+  .grid {
+    display: -ms-grid;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* ============================================
+   Safari Specific Fixes
+   ============================================ */
+
+@supports (-webkit-appearance: none) {
+  input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+  }
 }
 
 /* ============================================
    Component Imports
    ============================================ */
 
-@import 'components/hero.css';
-@import 'components/features.css';
-@import 'components/specifications.css';
-@import 'components/testimonials.css';
-@import 'components/cta.css';
+@import url('components/hero.css');
+@import url('components/features.css');
+@import url('components/specifications.css');
+@import url('components/testimonials.css');
+@import url('components/cta.css');
