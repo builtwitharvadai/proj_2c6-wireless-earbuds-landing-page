@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="styles/components/features.css">
   <link rel="stylesheet" href="styles/components/specifications.css">
   <link rel="stylesheet" href="styles/components/testimonials.css">
+  <link rel="stylesheet" href="styles/components/cta.css">
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
@@ -348,26 +349,58 @@
       </div>
     </section>
 
-    <section id="cta" class="cta-section">
-      <div class="cta-container">
-        <h2 class="cta-title">Ready to Upgrade Your Audio?</h2>
-        <p class="cta-subtitle">Get your premium wireless earbuds today with free shipping and our 30-day money-back guarantee.</p>
-        <div class="cta-price">
-          <span class="price-amount">$149</span>
-          <span class="price-note">One-time payment • No subscriptions</span>
+    <section id="cta" class="final-cta-section" data-feature-flag="on" aria-labelledby="final-cta-title">
+      <div class="final-cta-container">
+        <div class="final-cta-content">
+          <div class="final-cta-urgency" aria-label="Limited time offer">
+            Limited Time Offer - Save $50
+          </div>
+          
+          <h2 id="final-cta-title" class="final-cta-heading">Ready to Experience Premium Sound?</h2>
+          <p class="final-cta-subheading">Join thousands of satisfied customers and elevate your audio experience today</p>
+          <p class="final-cta-description">
+            Get your premium wireless earbuds now with free shipping, secure checkout, and our risk-free 30-day money-back guarantee. Limited stock available at this special price.
+          </p>
+          
+          <div class="final-cta-buttons">
+            <a 
+              href="#checkout" 
+              class="final-cta-button-primary"
+              role="button"
+              aria-label="Buy now for $149 with free shipping"
+            >
+              <span class="button-text">Buy Now - $149</span>
+            </a>
+            <a 
+              href="#contact" 
+              class="final-cta-button-secondary"
+              role="button"
+              aria-label="Contact support for questions"
+            >
+              <span class="button-text">Contact Support</span>
+            </a>
+          </div>
         </div>
-        <div class="cta-actions">
-          <button type="button" class="btn-primary btn-large" aria-label="Buy now for $149">
-            Buy Now - Free Shipping
-          </button>
-          <p class="cta-guarantee">✓ 30-Day Money-Back Guarantee • ✓ 2-Year Warranty</p>
+        
+        <div class="final-cta-trust-signals" role="list">
+          <div class="trust-signal" role="listitem">
+            <div class="trust-signal-icon" aria-hidden="true">🔒</div>
+            <div class="trust-signal-title">Secure Checkout</div>
+            <div class="trust-signal-description">256-bit SSL encryption protects your payment information</div>
+          </div>
+          
+          <div class="trust-signal" role="listitem">
+            <div class="trust-signal-icon" aria-hidden="true">✓</div>
+            <div class="trust-signal-title">30-Day Guarantee</div>
+            <div class="trust-signal-description">Not satisfied? Get a full refund, no questions asked</div>
+          </div>
+          
+          <div class="trust-signal" role="listitem">
+            <div class="trust-signal-icon" aria-hidden="true">🚚</div>
+            <div class="trust-signal-title">Free Shipping</div>
+            <div class="trust-signal-description">Fast, free delivery on all orders with tracking</div>
+          </div>
         </div>
-        <ul class="cta-benefits" role="list">
-          <li>✓ Free shipping on all orders</li>
-          <li>✓ Secure checkout with encryption</li>
-          <li>✓ Ships within 24 hours</li>
-          <li>✓ Expert customer support</li>
-        </ul>
       </div>
     </section>
   </main>
