@@ -3,60 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  
-  <title>Premium Wireless Earbuds | Crystal Clear Sound & All-Day Comfort</title>
-  
-  <meta name="description" content="Experience premium wireless earbuds with active noise cancellation, 30-hour battery life, and crystal clear sound. Free shipping on orders over $50.">
-  <meta name="keywords" content="wireless earbuds, bluetooth earbuds, noise cancelling, premium audio, wireless headphones">
-  
-  <meta property="og:title" content="Premium Wireless Earbuds | Crystal Clear Sound">
-  <meta property="og:description" content="Experience premium wireless earbuds with active noise cancellation, 30-hour battery life, and crystal clear sound.">
-  <meta property="og:image" content="https://example.com/images/earbuds-og.jpg">
-  <meta property="og:url" content="https://example.com">
+  <title>Premium Wireless Earbuds - Crystal Clear Sound | AudioTech</title>
+  <meta name="description" content="Experience premium wireless earbuds with active noise cancellation, 30-hour battery life, and crystal-clear sound quality. Free shipping on orders over $50.">
+  <meta property="og:title" content="Premium Wireless Earbuds - Crystal Clear Sound">
+  <meta property="og:description" content="Experience premium wireless earbuds with active noise cancellation, 30-hour battery life, and crystal-clear sound quality.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=1200&h=630&fit=crop">
+  <meta property="og:url" content="https://audiotech.example.com">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Premium Audio">
-  
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Premium Wireless Earbuds | Crystal Clear Sound">
-  <meta name="twitter:description" content="Experience premium wireless earbuds with active noise cancellation, 30-hour battery life, and crystal clear sound.">
-  <meta name="twitter:image" content="https://example.com/images/earbuds-twitter.jpg">
-  
-  <link rel="canonical" href="https://example.com">
-  
-  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
-  
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  
+  <link rel="canonical" href="https://audiotech.example.com">
   <link rel="stylesheet" href="styles/main.css">
-  
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "Premium Wireless Earbuds",
-    "description": "Premium wireless earbuds with active noise cancellation, 30-hour battery life, and crystal clear sound quality.",
-    "brand": {
-      "@type": "Brand",
-      "name": "Premium Audio"
-    },
-    "offers": {
-      "@type": "Offer",
-      "url": "https://example.com",
-      "priceCurrency": "USD",
-      "price": "149.99",
-      "availability": "https://schema.org/InStock",
-      "priceValidUntil": "2024-12-31"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "reviewCount": "2847"
-    }
-  }
-  </script>
+  <link rel="stylesheet" href="styles/components/hero.css">
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
@@ -64,425 +21,253 @@
   <header role="banner">
     <nav role="navigation" aria-label="Main navigation">
       <div class="nav-container">
-        <a href="/" class="logo" aria-label="Premium Audio Home">
-          <span class="logo-text">Premium Audio</span>
-        </a>
-        
-        <button 
-          type="button" 
-          class="mobile-menu-toggle" 
-          aria-expanded="false" 
-          aria-controls="main-menu"
-          aria-label="Toggle navigation menu"
-        >
-          <span class="hamburger-icon" aria-hidden="true"></span>
+        <div class="logo">AudioTech</div>
+        <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-icon"></span>
         </button>
-        
-        <ul id="main-menu" class="nav-menu" role="list">
-          <li><a href="#features" aria-label="View features">Features</a></li>
-          <li><a href="#specs" aria-label="View specifications">Specs</a></li>
-          <li><a href="#testimonials" aria-label="Read testimonials">Reviews</a></li>
-          <li><a href="#cta" class="nav-cta" aria-label="Buy now">Buy Now</a></li>
+        <ul class="nav-menu" role="list">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#specs">Specifications</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#cta" class="nav-cta">Buy Now</a></li>
         </ul>
       </div>
     </nav>
   </header>
-  
+
   <main id="main" role="main">
-    <section id="hero" class="hero-section" aria-labelledby="hero-title">
+    <section class="hero-section" data-feature-flag="on" aria-labelledby="hero-title">
       <div class="hero-container">
         <div class="hero-content">
-          <h1 id="hero-title" class="hero-title">
-            Experience Sound Like Never Before
-          </h1>
-          <p class="hero-subtitle">
-            Premium wireless earbuds with active noise cancellation, 30-hour battery life, and crystal clear audio quality.
-          </p>
+          <h1 id="hero-title" class="hero-title">Experience Sound Like Never Before</h1>
+          <p class="hero-subtitle">Premium wireless earbuds with active noise cancellation, 30-hour battery life, and studio-quality sound. Elevate your audio experience with cutting-edge technology designed for music lovers and professionals.</p>
+          
           <div class="hero-cta">
-            <a 
-              href="#cta" 
-              class="btn btn-primary btn-large"
-              aria-label="Shop now for premium wireless earbuds"
-            >
-              Shop Now - $149.99
-            </a>
-            <p class="hero-offer">Free shipping on orders over $50</p>
+            <button type="button" class="btn-primary btn-large" aria-label="Shop now for premium wireless earbuds">
+              <span class="button-text">Shop Now - $149</span>
+            </button>
+            <p class="hero-offer">Free shipping on orders over $50 • 30-day money-back guarantee</p>
           </div>
-          <div class="hero-trust">
-            <div class="trust-item">
-              <span class="trust-icon" aria-hidden="true">★</span>
-              <span class="trust-text">4.8/5 Rating</span>
-            </div>
-            <div class="trust-item">
+
+          <div class="hero-trust" role="list">
+            <div class="trust-item" role="listitem">
               <span class="trust-icon" aria-hidden="true">✓</span>
-              <span class="trust-text">2,847 Reviews</span>
+              <span>Free Shipping</span>
             </div>
-            <div class="trust-item">
-              <span class="trust-icon" aria-hidden="true">↻</span>
-              <span class="trust-text">30-Day Returns</span>
+            <div class="trust-item" role="listitem">
+              <span class="trust-icon" aria-hidden="true">✓</span>
+              <span>2-Year Warranty</span>
+            </div>
+            <div class="trust-item" role="listitem">
+              <span class="trust-icon" aria-hidden="true">✓</span>
+              <span>30-Day Returns</span>
             </div>
           </div>
         </div>
+
         <div class="hero-image">
           <img 
-            src="images/earbuds-hero.jpg" 
-            alt="Premium wireless earbuds in charging case with sleek black design"
-            width="800"
-            height="600"
+            src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=800&h=600&fit=crop&q=80&auto=format" 
+            alt="Premium wireless earbuds with sleek black design and charging case on modern surface"
             loading="eager"
             fetchpriority="high"
+            width="800"
+            height="600"
+            srcset="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=400&h=300&fit=crop&q=80&auto=format 400w,
+                    https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=800&h=600&fit=crop&q=80&auto=format 800w,
+                    https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=1200&h=900&fit=crop&q=80&auto=format 1200w"
+            sizes="(max-width: 768px) 100vw, 50vw"
           >
         </div>
       </div>
     </section>
-    
-    <section id="features" class="features-section" aria-labelledby="features-title">
-      <div class="section-container">
-        <header class="section-header">
-          <h2 id="features-title" class="section-title">Premium Features</h2>
-          <p class="section-subtitle">Engineered for the perfect listening experience</p>
-        </header>
-        
-        <div class="features-grid">
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2"/>
-              </svg>
-            </div>
-            <h3 class="feature-title">Active Noise Cancellation</h3>
-            <p class="feature-description">
-              Advanced ANC technology blocks out ambient noise, letting you focus on what matters most - your music.
-            </p>
-          </article>
-          
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="12" y="12" width="24" height="24" stroke="currentColor" stroke-width="2"/>
-              </svg>
-            </div>
-            <h3 class="feature-title">30-Hour Battery Life</h3>
-            <p class="feature-description">
-              All-day listening with 8 hours per charge plus 22 hours from the charging case. Quick charge gives 2 hours in 10 minutes.
-            </p>
-          </article>
-          
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M24 12L32 24L24 36L16 24L24 12Z" stroke="currentColor" stroke-width="2"/>
-              </svg>
-            </div>
-            <h3 class="feature-title">Crystal Clear Audio</h3>
-            <p class="feature-description">
-              Premium 10mm drivers deliver rich bass, clear mids, and crisp highs for an immersive audio experience.
-            </p>
-          </article>
-          
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="24" cy="24" r="12" stroke="currentColor" stroke-width="2"/>
-              </svg>
-            </div>
-            <h3 class="feature-title">IPX7 Water Resistant</h3>
-            <p class="feature-description">
-              Sweat and water resistant design perfect for workouts, running, and all-weather use.
-            </p>
-          </article>
-          
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 24H36M24 12V36" stroke="currentColor" stroke-width="2"/>
-              </svg>
-            </div>
-            <h3 class="feature-title">Touch Controls</h3>
-            <p class="feature-description">
-              Intuitive touch controls for music, calls, and voice assistant. Seamless control at your fingertips.
-            </p>
-          </article>
-          
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <ellipse cx="24" cy="24" rx="16" ry="10" stroke="currentColor" stroke-width="2"/>
-              </svg>
-            </div>
-            <h3 class="feature-title">Ergonomic Fit</h3>
-            <p class="feature-description">
-              Lightweight design with multiple ear tip sizes ensures all-day comfort and secure fit for any activity.
-            </p>
-          </article>
-        </div>
+
+    <section id="features" class="features-section section-container">
+      <div class="section-header">
+        <h2 class="section-title">Premium Features</h2>
+        <p class="section-subtitle">Everything you need for the perfect audio experience</p>
+      </div>
+      <div class="features-grid">
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">🎵</div>
+          <h3 class="feature-title">Studio Quality Sound</h3>
+          <p class="feature-description">Experience rich, balanced audio with deep bass and crystal-clear highs powered by premium drivers.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">🔇</div>
+          <h3 class="feature-title">Active Noise Cancellation</h3>
+          <p class="feature-description">Block out distractions with advanced ANC technology that adapts to your environment.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">🔋</div>
+          <h3 class="feature-title">30-Hour Battery Life</h3>
+          <p class="feature-description">All-day listening with 8 hours per charge plus 22 hours from the charging case.</p>
+        </article>
       </div>
     </section>
-    
-    <section id="specs" class="specs-section" aria-labelledby="specs-title">
-      <div class="section-container">
-        <header class="section-header">
-          <h2 id="specs-title" class="section-title">Technical Specifications</h2>
-          <p class="section-subtitle">Premium technology in every detail</p>
-        </header>
-        
-        <div class="specs-content">
-          <div class="specs-image">
-            <img 
-              src="images/earbuds-specs.jpg" 
-              alt="Detailed view of wireless earbuds showing premium build quality"
-              width="600"
-              height="600"
-              loading="lazy"
-              decoding="async"
-            >
+
+    <section id="specs" class="specs-section section-container">
+      <div class="section-header">
+        <h2 class="section-title">Technical Specifications</h2>
+        <p class="section-subtitle">Engineered for performance</p>
+      </div>
+      <div class="specs-content">
+        <div class="specs-image">
+          <img 
+            src="https://images.unsplash.com/photo-1606841837239-c5a1a4a07af7?w=800&h=600&fit=crop&q=80&auto=format" 
+            alt="Close-up view of wireless earbuds showing premium build quality and design details"
+            loading="lazy"
+            decoding="async"
+            width="800"
+            height="600"
+          >
+        </div>
+        <div class="specs-grid">
+          <div class="spec-item">
+            <span class="spec-label">Driver Size</span>
+            <span class="spec-value">10mm Dynamic</span>
           </div>
-          
-          <div class="specs-list">
-            <dl class="specs-grid">
-              <div class="spec-item">
-                <dt class="spec-label">Bluetooth Version</dt>
-                <dd class="spec-value">5.3</dd>
-              </div>
-              
-              <div class="spec-item">
-                <dt class="spec-label">Driver Size</dt>
-                <dd class="spec-value">10mm Dynamic</dd>
-              </div>
-              
-              <div class="spec-item">
-                <dt class="spec-label">Frequency Response</dt>
-                <dd class="spec-value">20Hz - 20kHz</dd>
-              </div>
-              
-              <div class="spec-item">
-                <dt class="spec-label">Battery Life (Earbuds)</dt>
-                <dd class="spec-value">8 Hours</dd>
-              </div>
-              
-              <div class="spec-item">
-                <dt class="spec-label">Battery Life (Case)</dt>
-                <dd class="spec-value">22 Hours</dd>
-              </div>
-              
-              <div class="spec-item">
-                <dt class="spec-label">Charging Time</dt>
-                <dd class="spec-value">1.5 Hours</dd>
-              </div>
-              
-              <div class="spec-item">
-                <dt class="spec-label">Quick Charge</dt>
-                <dd class="spec-value">10 min = 2 hours</dd>
-              </div>
-              
-              <div class="spec-item">
-                <dt class="spec-label">Water Resistance</dt>
-                <dd class="spec-value">IPX7</dd>
-              </div>
-              
-              <div class="spec-item">
-                <dt class="spec-label">Weight (Single Earbud)</dt>
-                <dd class="spec-value">4.5g</dd>
-              </div>
-              
-              <div class="spec-item">
-                <dt class="spec-label">Codec Support</dt>
-                <dd class="spec-value">AAC, SBC</dd>
-              </div>
-              
-              <div class="spec-item">
-                <dt class="spec-label">Microphones</dt>
-                <dd class="spec-value">6 (3 per earbud)</dd>
-              </div>
-              
-              <div class="spec-item">
-                <dt class="spec-label">Warranty</dt>
-                <dd class="spec-value">1 Year</dd>
-              </div>
-            </dl>
+          <div class="spec-item">
+            <span class="spec-label">Bluetooth</span>
+            <span class="spec-value">5.3</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">Water Resistance</span>
+            <span class="spec-value">IPX7</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">Charging</span>
+            <span class="spec-value">USB-C Fast Charge</span>
           </div>
         </div>
       </div>
     </section>
-    
-    <section id="testimonials" class="testimonials-section" aria-labelledby="testimonials-title">
-      <div class="section-container">
-        <header class="section-header">
-          <h2 id="testimonials-title" class="section-title">What Our Customers Say</h2>
-          <p class="section-subtitle">Join thousands of satisfied customers</p>
-        </header>
-        
-        <div class="testimonials-grid">
-          <article class="testimonial-card">
-            <div class="testimonial-rating" aria-label="5 out of 5 stars">
-              <span aria-hidden="true">★★★★★</span>
-            </div>
-            <blockquote class="testimonial-quote">
-              <p>
-                "Best earbuds I've ever owned. The noise cancellation is incredible and the battery life easily gets me through my workday and commute."
-              </p>
-            </blockquote>
-            <footer class="testimonial-author">
-              <cite>
-                <strong>Sarah Johnson</strong>
-                <span class="author-title">Software Engineer</span>
-              </cite>
-            </footer>
-          </article>
-          
-          <article class="testimonial-card">
-            <div class="testimonial-rating" aria-label="5 out of 5 stars">
-              <span aria-hidden="true">★★★★★</span>
-            </div>
-            <blockquote class="testimonial-quote">
-              <p>
-                "The sound quality is phenomenal. Crystal clear highs and deep bass. Perfect for my daily runs - they stay in place and are completely sweat-proof."
-              </p>
-            </blockquote>
-            <footer class="testimonial-author">
-              <cite>
-                <strong>Michael Chen</strong>
-                <span class="author-title">Fitness Instructor</span>
-              </cite>
-            </footer>
-          </article>
-          
-          <article class="testimonial-card">
-            <div class="testimonial-rating" aria-label="5 out of 5 stars">
-              <span aria-hidden="true">★★★★★</span>
-            </div>
-            <blockquote class="testimonial-quote">
-              <p>
-                "Comfortable for all-day wear and the touch controls are intuitive. The quick charge feature is a lifesaver when I forget to charge overnight."
-              </p>
-            </blockquote>
-            <footer class="testimonial-author">
-              <cite>
-                <strong>Emily Rodriguez</strong>
-                <span class="author-title">Marketing Manager</span>
-              </cite>
-            </footer>
-          </article>
+
+    <section id="testimonials" class="testimonials-section section-container">
+      <div class="section-header">
+        <h2 class="section-title">What Our Customers Say</h2>
+        <p class="section-subtitle">Join thousands of satisfied customers</p>
+      </div>
+      <div class="testimonials-grid">
+        <article class="testimonial-card">
+          <div class="testimonial-rating" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote class="testimonial-quote">
+            <p>Best earbuds I've ever owned. The sound quality is incredible and the noise cancellation actually works!</p>
+          </blockquote>
+          <div class="testimonial-author">
+            <strong>Sarah Johnson</strong>
+            <span class="author-title">Music Producer</span>
+          </div>
+        </article>
+        <article class="testimonial-card">
+          <div class="testimonial-rating" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote class="testimonial-quote">
+            <p>Perfect for my daily commute. Battery life is amazing and they're super comfortable for long wear.</p>
+          </blockquote>
+          <div class="testimonial-author">
+            <strong>Michael Chen</strong>
+            <span class="author-title">Software Engineer</span>
+          </div>
+        </article>
+        <article class="testimonial-card">
+          <div class="testimonial-rating" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote class="testimonial-quote">
+            <p>Worth every penny. The build quality is premium and they look as good as they sound.</p>
+          </blockquote>
+          <div class="testimonial-author">
+            <strong>Emily Rodriguez</strong>
+            <span class="author-title">Fitness Instructor</span>
+          </div>
+        </article>
+      </div>
+      <div class="testimonials-stats">
+        <div class="stat-item">
+          <div class="stat-number">50K+</div>
+          <div class="stat-label">Happy Customers</div>
         </div>
-        
-        <div class="testimonials-stats">
-          <div class="stat-item">
-            <strong class="stat-number">4.8/5</strong>
-            <span class="stat-label">Average Rating</span>
-          </div>
-          <div class="stat-item">
-            <strong class="stat-number">2,847</strong>
-            <span class="stat-label">Customer Reviews</span>
-          </div>
-          <div class="stat-item">
-            <strong class="stat-number">98%</strong>
-            <span class="stat-label">Would Recommend</span>
-          </div>
+        <div class="stat-item">
+          <div class="stat-number">4.9</div>
+          <div class="stat-label">Average Rating</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">98%</div>
+          <div class="stat-label">Would Recommend</div>
         </div>
       </div>
     </section>
-    
-    <section id="cta" class="cta-section" aria-labelledby="cta-title">
+
+    <section id="cta" class="cta-section">
       <div class="cta-container">
-        <div class="cta-content">
-          <h2 id="cta-title" class="cta-title">Ready to Upgrade Your Audio?</h2>
-          <p class="cta-subtitle">
-            Experience premium sound quality with our wireless earbuds. Free shipping on all orders over $50.
-          </p>
-          
-          <div class="cta-price">
-            <span class="price-amount">$149.99</span>
-            <span class="price-note">One-time payment</span>
-          </div>
-          
-          <div class="cta-actions">
-            <a 
-              href="#order" 
-              class="btn btn-primary btn-large"
-              aria-label="Order now for $149.99"
-            >
-              Order Now
-            </a>
-            <p class="cta-guarantee">
-              <span aria-hidden="true">✓</span> 30-Day Money-Back Guarantee
-            </p>
-          </div>
-          
-          <ul class="cta-benefits" role="list">
-            <li>
-              <span aria-hidden="true">✓</span> Free shipping on orders over $50
-            </li>
-            <li>
-              <span aria-hidden="true">✓</span> 1-year warranty included
-            </li>
-            <li>
-              <span aria-hidden="true">✓</span> 24/7 customer support
-            </li>
-            <li>
-              <span aria-hidden="true">✓</span> Secure checkout
-            </li>
-          </ul>
+        <h2 class="cta-title">Ready to Upgrade Your Audio?</h2>
+        <p class="cta-subtitle">Get your premium wireless earbuds today with free shipping and our 30-day money-back guarantee.</p>
+        <div class="cta-price">
+          <span class="price-amount">$149</span>
+          <span class="price-note">One-time payment • No subscriptions</span>
         </div>
+        <div class="cta-actions">
+          <button type="button" class="btn-primary btn-large" aria-label="Buy now for $149">
+            Buy Now - Free Shipping
+          </button>
+          <p class="cta-guarantee">✓ 30-Day Money-Back Guarantee • ✓ 2-Year Warranty</p>
+        </div>
+        <ul class="cta-benefits" role="list">
+          <li>✓ Free shipping on all orders</li>
+          <li>✓ Secure checkout with encryption</li>
+          <li>✓ Ships within 24 hours</li>
+          <li>✓ Expert customer support</li>
+        </ul>
       </div>
     </section>
   </main>
-  
+
   <footer role="contentinfo">
     <div class="footer-container">
       <div class="footer-grid">
         <div class="footer-column">
-          <h3 class="footer-heading">Premium Audio</h3>
-          <p class="footer-description">
-            Premium wireless audio products designed for the modern lifestyle.
-          </p>
+          <h3 class="footer-heading">AudioTech</h3>
+          <p class="footer-description">Premium audio products designed for music lovers and professionals.</p>
           <div class="footer-social">
-            <a href="#" aria-label="Follow us on Facebook" class="social-link">
+            <a href="#" class="social-link" aria-label="Follow us on Facebook">
               <span aria-hidden="true">f</span>
             </a>
-            <a href="#" aria-label="Follow us on Twitter" class="social-link">
+            <a href="#" class="social-link" aria-label="Follow us on Twitter">
               <span aria-hidden="true">t</span>
             </a>
-            <a href="#" aria-label="Follow us on Instagram" class="social-link">
+            <a href="#" class="social-link" aria-label="Follow us on Instagram">
               <span aria-hidden="true">i</span>
             </a>
           </div>
         </div>
-        
         <div class="footer-column">
           <h3 class="footer-heading">Products</h3>
-          <ul class="footer-links" role="list">
-            <li><a href="#features">Features</a></li>
-            <li><a href="#specs">Specifications</a></li>
-            <li><a href="#testimonials">Reviews</a></li>
-            <li><a href="#cta">Buy Now</a></li>
-          </ul>
+          <nav class="footer-links" aria-label="Product links">
+            <a href="#">Wireless Earbuds</a>
+            <a href="#">Headphones</a>
+            <a href="#">Accessories</a>
+            <a href="#">Gift Cards</a>
+          </nav>
         </div>
-        
         <div class="footer-column">
           <h3 class="footer-heading">Support</h3>
-          <ul class="footer-links" role="list">
-            <li><a href="#help">Help Center</a></li>
-            <li><a href="#shipping">Shipping Info</a></li>
-            <li><a href="#returns">Returns</a></li>
-            <li><a href="#warranty">Warranty</a></li>
-          </ul>
+          <nav class="footer-links" aria-label="Support links">
+            <a href="#">Contact Us</a>
+            <a href="#">Shipping Info</a>
+            <a href="#">Returns</a>
+            <a href="#">Warranty</a>
+          </nav>
         </div>
-        
         <div class="footer-column">
           <h3 class="footer-heading">Company</h3>
-          <ul class="footer-links" role="list">
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#privacy">Privacy Policy</a></li>
-            <li><a href="#terms">Terms of Service</a></li>
-          </ul>
+          <nav class="footer-links" aria-label="Company links">
+            <a href="#">About Us</a>
+            <a href="#">Careers</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </nav>
         </div>
       </div>
-      
       <div class="footer-bottom">
-        <p class="footer-copyright">
-          &copy; 2024 Premium Audio. All rights reserved.
-        </p>
+        <p class="footer-copyright">&copy; 2024 AudioTech. All rights reserved.</p>
       </div>
     </div>
   </footer>
