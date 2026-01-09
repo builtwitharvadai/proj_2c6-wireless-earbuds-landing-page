@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="styles/components/hero.css">
   <link rel="stylesheet" href="styles/components/features.css">
   <link rel="stylesheet" href="styles/components/specifications.css">
+  <link rel="stylesheet" href="styles/components/testimonials.css">
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
@@ -201,55 +202,148 @@
       </div>
     </section>
 
-    <section id="testimonials" class="testimonials-section section-container">
-      <div class="section-header">
-        <h2 class="section-title">What Our Customers Say</h2>
-        <p class="section-subtitle">Join thousands of satisfied customers</p>
-      </div>
-      <div class="testimonials-grid">
-        <article class="testimonial-card">
-          <div class="testimonial-rating" aria-label="5 out of 5 stars">★★★★★</div>
-          <blockquote class="testimonial-quote">
-            <p>Best earbuds I've ever owned. The sound quality is incredible and the noise cancellation actually works!</p>
-          </blockquote>
-          <div class="testimonial-author">
-            <strong>Sarah Johnson</strong>
-            <span class="author-title">Music Producer</span>
-          </div>
-        </article>
-        <article class="testimonial-card">
-          <div class="testimonial-rating" aria-label="5 out of 5 stars">★★★★★</div>
-          <blockquote class="testimonial-quote">
-            <p>Perfect for my daily commute. Battery life is amazing and they're super comfortable for long wear.</p>
-          </blockquote>
-          <div class="testimonial-author">
-            <strong>Michael Chen</strong>
-            <span class="author-title">Software Engineer</span>
-          </div>
-        </article>
-        <article class="testimonial-card">
-          <div class="testimonial-rating" aria-label="5 out of 5 stars">★★★★★</div>
-          <blockquote class="testimonial-quote">
-            <p>Worth every penny. The build quality is premium and they look as good as they sound.</p>
-          </blockquote>
-          <div class="testimonial-author">
-            <strong>Emily Rodriguez</strong>
-            <span class="author-title">Fitness Instructor</span>
-          </div>
-        </article>
-      </div>
-      <div class="testimonials-stats">
-        <div class="stat-item">
-          <div class="stat-number">50K+</div>
-          <div class="stat-label">Happy Customers</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">4.9</div>
-          <div class="stat-label">Average Rating</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">98%</div>
-          <div class="stat-label">Would Recommend</div>
+    <section id="testimonials" class="testimonials" aria-labelledby="testimonials-title">
+      <div class="testimonials__container">
+        <header class="testimonials__header">
+          <h2 id="testimonials-title" class="testimonials__title">What Our Customers Say</h2>
+          <p class="testimonials__subtitle">Join thousands of satisfied customers experiencing premium audio quality</p>
+        </header>
+        
+        <div class="testimonials__grid">
+          <article class="testimonial-card">
+            <div class="testimonial-card__rating" role="img" aria-label="5 out of 5 stars">
+              <span class="star star--filled"></span>
+              <span class="star star--filled"></span>
+              <span class="star star--filled"></span>
+              <span class="star star--filled"></span>
+              <span class="star star--filled"></span>
+            </div>
+            <blockquote class="testimonial-card__review">
+              The sound quality is absolutely incredible! Crystal clear highs and deep, rich bass that brings my music to life. These earbuds have completely transformed my daily commute.
+            </blockquote>
+            <div class="testimonial-card__customer">
+              <img 
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&q=80" 
+                alt="Sarah M." 
+                class="testimonial-card__photo"
+                loading="lazy"
+                width="100"
+                height="100"
+              >
+              <div class="testimonial-card__info">
+                <div class="testimonial-card__name">Sarah M.</div>
+                <div class="testimonial-card__verified">Verified Purchase</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-card__rating" role="img" aria-label="5 out of 5 stars">
+              <span class="star star--filled"></span>
+              <span class="star star--filled"></span>
+              <span class="star star--filled"></span>
+              <span class="star star--filled"></span>
+              <span class="star star--filled"></span>
+            </div>
+            <blockquote class="testimonial-card__review">
+              I wear these for 8+ hours a day and they're incredibly comfortable. The battery life is phenomenal - I only charge them twice a week. Best investment I've made this year!
+            </blockquote>
+            <div class="testimonial-card__customer">
+              <img 
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&q=80" 
+                alt="David L." 
+                class="testimonial-card__photo"
+                loading="lazy"
+                width="100"
+                height="100"
+              >
+              <div class="testimonial-card__info">
+                <div class="testimonial-card__name">David L.</div>
+                <div class="testimonial-card__verified">Verified Purchase</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-card__rating" role="img" aria-label="5 out of 5 stars">
+              <span class="star star--filled"></span>
+              <span class="star star--filled"></span>
+              <span class="star star--filled"></span>
+              <span class="star star--filled"></span>
+              <span class="star star--filled"></span>
+            </div>
+            <blockquote class="testimonial-card__review">
+              The active noise cancellation is a game-changer for my gym sessions. I can focus on my workout without any distractions. Plus, they stay secure no matter how intense my training gets.
+            </blockquote>
+            <div class="testimonial-card__customer">
+              <img 
+                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&q=80" 
+                alt="Jessica R." 
+                class="testimonial-card__photo"
+                loading="lazy"
+                width="100"
+                height="100"
+              >
+              <div class="testimonial-card__info">
+                <div class="testimonial-card__name">Jessica R.</div>
+                <div class="testimonial-card__verified">Verified Purchase</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-card__rating" role="img" aria-label="5 out of 5 stars">
+              <span class="star star--filled"></span>
+              <span class="star star--filled"></span>
+              <span class="star star--filled"></span>
+              <span class="star star--filled"></span>
+              <span class="star star--filled"></span>
+            </div>
+            <blockquote class="testimonial-card__review">
+              As an audio engineer, I'm extremely picky about sound quality. These earbuds deliver professional-grade audio at an unbeatable price. The clarity and balance are outstanding.
+            </blockquote>
+            <div class="testimonial-card__customer">
+              <img 
+                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&q=80" 
+                alt="Marcus T." 
+                class="testimonial-card__photo"
+                loading="lazy"
+                width="100"
+                height="100"
+              >
+              <div class="testimonial-card__info">
+                <div class="testimonial-card__name">Marcus T.</div>
+                <div class="testimonial-card__verified">Verified Purchase</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-card__rating" role="img" aria-label="5 out of 5 stars">
+              <span class="star star--filled"></span>
+              <span class="star star--filled"></span>
+              <span class="star star--filled"></span>
+              <span class="star star--filled"></span>
+              <span class="star star--filled"></span>
+            </div>
+            <blockquote class="testimonial-card__review">
+              Perfect for travel! The noise cancellation blocks out airplane noise completely, and the battery lasts through my longest flights. I can't imagine flying without these now.
+            </blockquote>
+            <div class="testimonial-card__customer">
+              <img 
+                src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&q=80" 
+                alt="Emily K." 
+                class="testimonial-card__photo"
+                loading="lazy"
+                width="100"
+                height="100"
+              >
+              <div class="testimonial-card__info">
+                <div class="testimonial-card__name">Emily K.</div>
+                <div class="testimonial-card__verified">Verified Purchase</div>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
