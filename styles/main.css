@@ -171,6 +171,61 @@ body {
   justify-content: center;
 }
 
+/* Quick header styling */
+.site-header {
+  background-color: var(--color-primary-700);
+  color: white;
+  padding: var(--space-md) 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow-md);
+}
+
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: var(--font-size-2xl);
+}
+
+.nav-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: var(--space-lg);
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+  transition: color var(--transition-base);
+}
+
+.nav-menu a:hover {
+  color: var(--color-primary-200);
+}
+
+/* Footer quick style */
+.site-footer {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-inverse);
+  padding: var(--space-xl) 0;
+  text-align: center;
+  margin-top: var(--space-3xl);
+}
+
+.site-footer a {
+  color: var(--color-primary-200);
+  text-decoration: none;
+}
+
 /* ============================================
    Cross-Browser Grid with Vendor Prefixes
    ============================================ */
