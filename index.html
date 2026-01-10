@@ -1,42 +1,53 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
+  <!-- Character encoding MUST be first -->
   <meta charset="UTF-8">
+
+  <!-- IE Compatibility Mode -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Viewport for responsive design -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  
+
+  <!-- Document title with site name -->
   <title>Premium Wireless Earbuds - Crystal Clear Sound | AudioTech</title>
-  
+
+  <!-- Meta descriptions for SEO -->
   <meta name="description" content="Experience premium wireless earbuds with active noise cancellation, 30-hour battery life, and crystal clear sound quality. Free shipping on all orders.">
-  
-  <!-- Open Graph -->
+
+  <!-- Open Graph for social media -->
   <meta property="og:title" content="Premium Wireless Earbuds - Crystal Clear Sound">
   <meta property="og:description" content="Experience premium wireless earbuds with active noise cancellation, 30-hour battery life, and crystal clear sound quality.">
   <meta property="og:image" content="https://example.com/images/earbuds-social.jpg">
   <meta property="og:url" content="https://example.com/">
   <meta property="og:type" content="website">
-  
+
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Premium Wireless Earbuds - Crystal Clear Sound">
   <meta name="twitter:description" content="Experience premium wireless earbuds with active noise cancellation, 30-hour battery life, and crystal clear sound quality.">
   <meta name="twitter:image" content="https://example.com/images/earbuds-social.jpg">
-  
+
+  <!-- Canonical URL to prevent duplicate content -->
   <link rel="canonical" href="https://example.com/">
-  
+
+  <!-- DNS prefetch and preconnect for performance -->
   <link rel="dns-prefetch" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  
+
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+
+  <!-- Apple Touch Icon -->
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-  
+
   <!-- Theme color -->
   <meta name="theme-color" content="#4A90E2" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#1a1a2e" media="(prefers-color-scheme: dark)">
-  
+
   <!-- Stylesheets -->
   <link rel="stylesheet" href="styles/main.css">
   <link rel="stylesheet" href="styles/components/hero.css">
@@ -46,10 +57,10 @@
   <link rel="stylesheet" href="styles/components/cta.css">
 </head>
 <body>
-  <!-- Skip link -->
+  <!-- Skip navigation for accessibility -->
   <a href="#main" class="skip-link visually-hidden">Skip to main content</a>
 
-  <!-- Header -->
+  <!-- Semantic header -->
   <header role="banner" class="site-header">
     <div class="container">
       <nav role="navigation" aria-label="Main navigation">
@@ -66,16 +77,18 @@
     </div>
   </header>
 
-  <!-- Main content -->
+  <!-- Main content with landmark -->
   <main id="main" role="main">
 
     <!-- Hero Section -->
     <section class="hero-section" aria-labelledby="hero-title">
-      <div class="container">
+      <div class="hero-container container">
         <div class="hero-content">
-          <h2 id="hero-title">Premium Wireless Earbuds</h2>
+          <h2 id="hero-title" class="hero-title">Premium Wireless Earbuds</h2>
           <p class="hero-subtitle">Experience crystal clear sound with active noise cancellation</p>
-          <a href="#cta" class="final-cta-button-primary">Shop Now</a>
+          <div class="hero-cta">
+            <a href="#cta" class="final-cta-button-primary btn-primary">Shop Now</a>
+          </div>
         </div>
         <div class="hero-image">
           <img
@@ -90,7 +103,7 @@
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="features-section" aria-labelledby="features-title">
+    <section id="features" class="features" aria-labelledby="features-title">
       <div class="container">
         <h2 id="features-title">Key Features</h2>
         <div class="features__grid">
@@ -151,17 +164,17 @@
     </section>
 
     <!-- CTA Section -->
-    <section id="cta" class="final-cta-section">
+    <section id="cta" class="final-cta-section" aria-labelledby="cta-title">
       <div class="container">
-        <h2>Ready to Experience Premium Sound?</h2>
+        <h2 id="cta-title">Ready to Experience Premium Sound?</h2>
         <p>Order now and get free shipping on all orders</p>
-        <a href="#order" class="final-cta-button-primary">Order Now - $199</a>
+        <a href="#" class="final-cta-button-primary">Order Now - $199</a>
       </div>
     </section>
 
   </main>
 
-  <!-- Footer -->
+  <!-- Semantic footer -->
   <footer role="contentinfo" class="site-footer">
     <div class="container">
       <p>© 2024 AudioTech. All rights reserved.</p>
@@ -175,7 +188,7 @@
     </div>
   </footer>
 
-  <!-- Scripts -->
+  <!-- Scripts loaded in correct order -->
   <script src="js/compatibility.js"></script>
   <script src="js/performance.js" defer></script>
   <script src="js/testimonials.js" defer></script>
